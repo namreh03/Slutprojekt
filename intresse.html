@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intresseanmälan</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <nav id="nav">
@@ -33,7 +34,14 @@
     <p>Telefonnummer</p>
     <p>SMS</p>
     <p>Frågor</p>
+    <p id="datum">Dagens datum: <span id="datetime"></span></p>
+    <script>
+        var dt = new Date();
+        document.getElementById("datetime").innerHTML = (("0" + dt.getDate()).slice(-2)) + "-" + (("0" + (dt.getMonth() + 1)).slice(-2)) + "-" + (dt.getFullYear());
+    </script>
+    
     <h3>Veckor och pris</h3>
+    <p id="tid"></p>
     
     <ul id="pris">
         <li class="pris">
@@ -55,6 +63,5 @@
             Vecka g - h ngt pris
         </li>
     </ul>
-    
 </body>
 </html>
